@@ -32,7 +32,7 @@ class CSVTimeSeriesFile:
             var = 0
 
             #salto la prima riga che contiene solo i nomi delle variabili
-            if split[1] != 'epoch':
+            if split[0] != 'epoch':
 
                 #secondo controllo: devo verificare che le due variabili del epoch e delle temperature siano valori int o float, per le temperature ho usato int poichè se la data mi viene data come valore folating point è rischiesto di trasformarla in in intero. Se non posso convertire le date o le temperature, a interi e floating point rispettivamente, salto la riga ma non alzo una eccezione
                 try:
